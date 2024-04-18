@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "financial_analyst_crew"
+version = "0.1.0"
+description = "optmize-response-crew using crewAI"
+authors = ["Your Name <you@example.com>"]
+include = ["src/*"] 
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+crewai = {extras = ["tools"], version = "^0.22.2"}
+sec-api = "^1.0.17"
+unstructured = "^0.13.2"
+
+[tool.poetry.scripts]
+financial_analyst_crew = "financial_analyst_crew.main:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
